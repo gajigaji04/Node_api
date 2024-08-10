@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animal</title>
+    </head>
+    <body>
+        <h1>동물 이름 입력하기</h1>
+        <input type="text" id="animalName" placeholder="Enter name" />
+        <input type="button" value="Submit" onclick="addAnimalToList()" />
+
+        <p>list</p>
+        <ul id="animalList"></ul>
+        <!-- 동물 이름이 추가될 리스트 -->
+
+        <script>
+            function addAnimalToList() {
+                var animalName = document.getElementById('animalName').value;
+                if (animalName) {
+                    var li = document.createElement('li');
+                    li.textContent = animalName;
+                    document.getElementById('animalList').appendChild(li);
+                    document.getElementById('animalName').value = ''; // 입력칸 초기화
+                }
+            }
+        </script>
+    </body>
+</html>
