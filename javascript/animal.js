@@ -1,4 +1,4 @@
-function addAnimal() {
+function addAnimalToList() {
     var animalName = document.getElementById('animalName').value;
     if (animalName) {
         var li = document.createElement('li');

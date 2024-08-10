@@ -4,25 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>배경 색깔 변경</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin-top: 50px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/color.css" />
     </head>
     <body>
         <h1>배경 색깔을 변경해보세요!</h1>
         <button onclick="changeBackgroundColor()">배경 색 변경</button>
 
-        <script>
-            function changeBackgroundColor() {
-                // 랜덤한 색상을 생성합니다.
-                const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-                // 바디의 배경 색깔을 랜덤한 색상으로 변경합니다.
-                document.body.style.backgroundColor = randomColor;
-            }
-        </script>
+        <script src="../javascript/color.js"></script>
     </body>
 </html>
