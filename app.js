@@ -11,6 +11,11 @@ app.get('/animal', function (req, res) {
     res.sendfile('./public/animal.html');
 });
 
+// 색깔 바꾸기
+app.get('/color', function (req, res) {
+    res.sendfile('./public/color.html');
+});
+
 // user JSON 목록
 app.get('/user/:id', function (req, res) {
     // const q = req.params;
