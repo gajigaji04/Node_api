@@ -1,25 +1,26 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
-app.get('/', function (req, res) {
-    res.sendfile('./public/index.html');
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// 동물 이름 입력
-app.get('/animal', function (req, res) {
-    res.sendfile('./public/animal.html');
+app.get('/animal', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'animal.html'));
 });
 
-// 색깔 바꾸기
-app.get('/color', function (req, res) {
-    res.sendfile('./public/color.html');
+app.get('/color', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'color.html'));
 });
 
 // user JSON 목록
 app.get('/user/:id', function (req, res) {
-    // const q = req.params;
-    // console.log(q.id);
+    const q = req.params;
+    console.log(q.id);
 
     res.json({ user: q.id });
 });
